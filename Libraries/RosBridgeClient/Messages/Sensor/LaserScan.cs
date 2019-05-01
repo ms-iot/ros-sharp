@@ -22,14 +22,14 @@ namespace RosSharp.RosBridgeClient.Messages.Sensor
         [JsonIgnore]
         public const string RosMessageName = "sensor_msgs/LaserScan";
         public Standard.Header header;
-        public float angle_min;
-        public float angle_max;
-        public float angle_increment;
-        public float time_increment;
-        public float range_min;
-        public float range_max;
-        public float[] ranges;
-        public float[] intensities;
+        public double angle_min;
+        public double angle_max;
+        public double angle_increment;
+        public double time_increment;
+        public double range_min;
+        public double range_max;
+        public double?[] ranges;
+        public double?[] intensities;
 
         public LaserScan()
         {
@@ -40,8 +40,8 @@ namespace RosSharp.RosBridgeClient.Messages.Sensor
             time_increment = 0;
             range_min = 0;
             range_max = 0;
-            ranges = new float[0];
-            intensities = new float[0];
+            ranges = new double?[0];
+            intensities = new double?[0];
         }
     }
 }
